@@ -1,0 +1,19 @@
+atlasId,cohortId,id,cohortName
+9,9,9,[TROY] 3P MACE
+10,10,10,[TROY] 3P MACE + unstable angina
+11,11,11,[TROY] HHF + CV death
+12,12,12,[TROY] Stroke + systemic embolism
+13,13,13,[TROY] Cancer
+14,14,14,[TROY] MI + stroke
+19,19,19,[TROY] edoxaban (ENGAGEAF-TIMI48)
+24,24,24,[TROY] warfarin (ENGAGEAF-TIMI48)
+15,15,15,[TROY] Apixaban (ARISTOTLE)
+20,20,20,[TROY] Warfarin (ARISTOTLE)
+26,26,26,[TROY] Apixaban (ARISTOTLE; RWD)
+27,27,27,[TROY] Warfarin (ARISTOTLE; RWD)
+17,17,17,[TROY] Rivaroxaban (ROCKETAF)
+21,21,21,[TROY] Warfarin (ROCKETAF)
+29,29,29,[TROY] Rivaroxaban (ROCKETAF; RWD)
+30,30,30,[TROY] Warfarin (ROCKETAF; RWD)
+31,31,31,[TROY] edoxaban (ENGAGEAF-TIMI48; RWD)
+32,32,32,[TROY] Warfarin (ENGAGEAF-TIMI48; RWD)
