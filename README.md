@@ -1,4 +1,4 @@
-# Trials Replication through Observational study by Yonsei (TROY)
+Trials Replication through Observational study by Yonsei (TROY)
 =============================================================================
 
 - Analytics use case(s): **Population-Level Estimation**
