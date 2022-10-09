@@ -1,0 +1,39 @@
+﻿characteristics,target,targetsd,comparator,comparatorsd,tag,isNa,targetsize,comparatorsize,typeofstatistics
+Age median,70,,70,,Demographics,,9120,9081,median
+Age interquartile range,63-76,,36-76,,Demographics,Y,,,IQR
+Female sex,3234,,3182,,Demographics,,,,category
+Region,0,,0,,Demographics,Y,,,category
+Median systolic blood pressure — mm Hg,130,,130,,Demographics,,,,median
+Interquartile range systolic blood pressure ,120-140,,120-140,,Demographics,Y,,,IQR
+Weight median — kg,82,,82,,Demographics,,,,median
+Interquartile range weight,70-96,,70-95,,Demographics,Y,,,IQR
+Prior myocardial infarction,1319,,1266,,Medical history,,,,category
+Prior clinically relevant or spontaneous bleeding,1525,,1515,,Medical history,Y,,,category
+History of fall within previous year,386,,367,,Medical history,Y,,,category
+Proxymal atrial fibrillation,1374,,1412,,Type of atrial fibrillation,Y,,,category
+Persistent or permanent atrial fibrillation,7744,,7668,,Type of atrial fibrillation,Y,,,category
+Proir use of vitamin K antagonist for >30 consecutive days,5208,,5193,,Proir use of vitamin K antagonist for >30 consecutive days,Y,,,category
+Age >= 75 yr,2850,,2828,,Qualifying risk factors,,,,category
+"Prior stroke, TIA, or systemic embolism",1748,,1790,,Qualifying risk factors,,,,category
+Heart failure or reduced left ventricular ejection fraction,3235,,3216,,Qualifying risk factors,,,,category
+Diabetes,2284,,2263,,Qualifying risk factors,,,,category
+Hypertension requiring treatment,7962,,7954,,Qualifying risk factors,,,,category
+CHADS2score mean,2.1,1.1,2.1,1.1,Qualifying risk factors,,,,mean
+CHADS2score distribution - 1,3100,,3083,,Qualifying risk factors,,,,category
+CHADS2score distribution - 2,3262,,3254,,Qualifying risk factors,,,,category
+CHADS2score distribution - 3,2758,,2744,,Qualifying risk factors,,,,category
+ACE inhibitor or ARB,6464,,6368,,Medications at time of randomization,,,,category
+Amiodarone,1009,,1042,,Medications at time of randomization,,,,category
+Beta-blocker,5797,,5685,,Medications at time of randomization,,,,category
+Aspirin,2859,,2773,,Medications at time of randomization,,,,category
+Clopidogrel,170,,168,,Medications at time of randomization,,,,category
+Digoxin,2916,,2912,,Medications at time of randomization,,,,category
+Calcium channel blocker,2744,,2823,,Medications at time of randomization,,,,category
+Statin,4104,,4095,,Medications at time of randomization,,,,category
+Nonsteroidal antiinflammatory agent,752,,768,,Medications at time of randomization,,,,category
+Gastric antacid drugs,1683,,1667,,Medications at time of randomization,,,,category
+"Normal, >80ml/min",3761,,3757,,"Renal function, creatinine clearance",,,,category
+"Mild impairment, >50 to 80/min",3817,,3770,,"Renal function, creatinine clearance",,,,category
+Moderate impairment >30 to 50 ml/min,1365,,1382,,"Renal function, creatinine clearance",,,,category
+Severe impairment (<=30 ml/min),137,,133,,"Renal function, creatinine clearance",,,,category
+Not reported,40,,39,,"Renal function, creatinine clearance",,,,category

@@ -1,0 +1,23 @@
+﻿characteristics,target,,comparator,,tag,isNa,targetsize,comparatorsize,typeofstatistics,target1,target2
+Age median,72,,72,,Demographics,,14069,7036,median,72,72
+Age interquartile range,64-78,,64-78,,Demographics,Y,,,IQR,64-78,64-78
+Female sex,,,2641,,Demographics,,,,category,2669,2730
+Region,0,,0,,Demographics,Y,,,category,0,0
+Paroxysmal atrial fibrillation,0,,0,,Paroxysmal atrial fibrillation,Y,,,category,0,0
+Age >= 75yr,5654,,2820,,Qualifying risk factor,,,,category,2848,2806
+Prior stroke or transient ischemic attack,3982,,1991,,Qualifying risk factor,,,,category,1976,2006
+Congestive heart failure,8076,,4048,,Qualifying risk factor,,,,category,4097,3979
+Diabetes mellitus,5103,,2521,,Qualifying risk factor,,,,category,2559,2544
+Hypertension requiring treatment,13166,,6588,,Qualifying risk factor,,,,category,6591,6575
+CHADS2 score mean,2.8,1,2.8,1,CHADS2 score,,,,mean,2.8,2.8
+CHADS2 score <= 3,10892,,5445,,CHADS2 score,,,,category,5422,5470
+CHADS2 score 4-6,3177,,1591,,CHADS2 score,,,,category,1613,1564
+Dose reduction at randomization,3569,,1787,,Dose reduction at randomization,,,,category,1784,1785
+Creatinine clearance ≤50 ml/min,2713,,1361,,Dose reduction at randomization,,,,category,1379,1334
+Weight ≤60 kg,1382,,701,,Dose reduction at randomization,,,,category,684,698
+Use of verapamil or quinidine,518,,243,,Dose reduction at randomization,,,,category,258,260
+Previous use of vitamin K antagonist for ≥60 days — no. (%),8303,,4138,,Medication history,Y,,,category,4140,4163
+Aspirin,4088,,2092,,Medication history,,,,category,2070,2018
+Thienopyridine,323,,164,,Medication history,,,,category,174,149
+Amiodarone,1665,,827,,Medication history,,,,category,866,799
+Digoxin or digitalis preparation,4151,,2176,,Medication history,,,,category,2078,2073

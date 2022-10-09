@@ -1,0 +1,25 @@
+﻿characteristics,target,targetsd,comparator,comparatorsd,tag,isNa,targetsize,comparatorsize,typeofstatistics
+Age mean,63.9,,64,,Demographics,,8582,8578,mean
+Female sex,3171,,3251,,Demographics,,,,category
+Race,0,,0,,Demographics,Y,,,category
+Region,0,,0,,Demographics,Y,,,category
+BMI mean,32.1,6,32,6.1,Demographics,,,,mean
+median duration of type 2 diabetes,11,,10,,Duration of type 2 diabetes,Y,,,median
+Glycated hemoglobin,8.3,1.2,8.3,1.2,Lab values,,,,mean
+Systolic blood pressure — mm Hg,135.1,15.3,134.8,15.5,Lab values,,,,mean
+Estimated glomerular filtration rate — ml/min/1.73,85.4,15.8,85.1,16,Lab values,,,,mean
+Established atherosclerotic cardiovascular disease — no.,3574,,3500,,Lab values,,,,category
+History of coronary artery disease — no.,2824,,2834,,Medical history,,,,category
+History of peripheral artery disease — no. ,522,,503,,Medical history,,,,category
+History of cerebrovascular disease — no.,653,,648,,Medical history,,,,category
+History of heart failure — no.,852,,872,,Medical history,,,,category
+Insulin,3567,,3446,,Glucose-lowering therapies,,,,category
+Metformin,7020,,7048,,Glucose-lowering therapies,,,,category
+Sulfonylurea,3615,,3707,,Glucose-lowering therapies,,,,category
+DPP-4,1418,,1470,,Glucose-lowering therapies,,,,category
+GLP-1 receptor agonis,397,,353,,Glucose-lowering therapies,,,,category
+Antiplatelet agents,5245,,5242,,Cardiovascular therapies,,,,category
+ACE inhibitor or ARB ,6977,,6973,,Cardiovascular therapies,,,,category
+Beta-blocker ,4498,,4532,,Cardiovascular therapies,,,,category
+Statin or ezetimibe ,6432,,6436,,Cardiovascular therapies,,,,category
+Diuretics ,3488,,3479,,Cardiovascular therapies,,,,category

@@ -1,0 +1,39 @@
+﻿characteristics,target,targetsd,comparator,comparatorsd,tag,isNa,targetsize,comparatorsize,typeofstatistics
+Age years,65.4,7.9,65.5,8,Demographics,,7332,7339,mean
+Female sex,2134,,2163,,Demographics,,,,category
+Race/Ethnicity,0,,0,,Demographics,Y,,,category
+Hispanic or Latino,0,,0,,Demographics,Y,,,category
+Duration of diabetes (years),11.6,8.1,11.6,8.1,Duration of diabetes,Y,,,continuous
+Qualifying HbA1c (%),7.2,0.5,7.2,0,Lab values,,,,mean
+Body mass index (kg/m2 ),30.2,5.6,30.2,5.7,Demographics,,,,mean
+Systolic blood pressure (mmHg),135,16.9,135,17.1,Lab values,,,,mean
+Diastolic blood pressure (mmHg),771.1,10.3,77.2,10.6,Lab values,,,,mean
+eGFR (mL/min/1.73 m2 )§,74.9,21.3,74.9,20.9,Lab values,,,,mean
+eGFR < 50 (mL/min/1.73 m2 )§,686,,683,,Lab values,,,,category
+Urinary albumin:creatinine ratio median (mg/g),10.3,,11.4,,Lab values,,,,median
+Total cholesterol (mg/dL),166.1,44.8,165.4,45.9,Lab values,,,,mean
+LDL cholesterol (mg/dL),91.2,63.8,90.7,51.2,Lab values,,,,mean
+HDL cholesterol (mg/dL),43.5,12,43.4,13,Lab values,,,,mean
+Triglycerides (mg/dL),166,101,164.8,98.8,Lab values,,,,mean
+Prior cardiovascular disease,5397,,5466,,Prior cardiovascular disease,,,,category
+Myocardial infarction,3133,,3122,,Prior cardiovascular disease,,,,category
+>50% coronary stenosis,3804,,3883,,Prior cardiovascular disease,,,,category
+Prior PCI,2814,,2900,,Prior cardiovascular disease,,,,category
+CABG,1845,,1819,,Prior cardiovascular disease,,,,category
+Prior cerebrovascular disease,1806,,1782,,Medical history,,,,category
+Prior Peripheral arterial disease,1217,,1216,,Medical history,,,,category
+Prior Congestive heart failure,1303,,1340,,Medical history,,,,category
+NYHA class 3 or higher,171,,202,,Medical history,Y,,,category
+Cigarette smoking,0,,0,,Demographics,Y,,,category
+Metformin,5936,,6030,,Medication history,,,,category
+Sulfonylurea,3346,,3299,,Medication history,,,,category
+Thiazolidinedione,196,,200,,Medication history,,,,category
+Insulin,1724,,1684,,Medication history,,,,category
+Beta blocker,4647,,4675,,Medication history,,,,category
+ACE inhibitor or ARB,5743,,5812,,Medication history,,,,category
+Calcium channel blocker,2444,,2517,,Medication history,,,,category
+Diuretic,2976,,3044,,Medication history,,,,category
+Aspirin,5764,,5754,,Medication history,,,,category
+Other antiplatelet,1593,,1594,,Medication history,,,,category
+Statin,5851,,5868,,Medication history,,,,category
+Ezetimibe,386,,375,,Medication history,,,,category
