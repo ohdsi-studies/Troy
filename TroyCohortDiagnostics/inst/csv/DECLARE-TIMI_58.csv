@@ -1,5 +1,5 @@
 ﻿characteristics,target,targetsd,comparator,comparatorsd,tag,isNa,targetsize,comparatorsize,typeofstatistics
-Age mean,63.9,,64,,Demographics,,8582,8578,mean
+Age mean,63.9,6.8,64,6.8,Demographics,,8582,8578,mean
 Female sex,3171,,3251,,Demographics,,,,category
 Race,0,,0,,Demographics,Y,,,category
 Region,0,,0,,Demographics,Y,,,category

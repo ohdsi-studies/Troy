@@ -1,9 +1,9 @@
-﻿characteristics,target,,comparator,,tag,isNa,targetsize,comparatorsize,typeofstatistics,target1,target2
+﻿characteristics,target,targetsd,comparator,comparatorsd,tag,isNa,targetsize,comparatorsize,typeofstatistics,target1,target2
 Age median,72,,72,,Demographics,,14069,7036,median,72,72
 Age interquartile range,64-78,,64-78,,Demographics,Y,,,IQR,64-78,64-78
-Female sex,,,2641,,Demographics,,,,category,2669,2730
+Female sex,5399,,2641,,Demographics,,,,category,2669,2730
 Region,0,,0,,Demographics,Y,,,category,0,0
-Paroxysmal atrial fibrillation,0,,0,,Paroxysmal atrial fibrillation,Y,,,category,0,0
+Paroxysmal atrial fibrillation,0,,0,,Paroxysmal atrial fibrillation,,,,category,0,0
 Age >= 75yr,5654,,2820,,Qualifying risk factor,,,,category,2848,2806
 Prior stroke or transient ischemic attack,3982,,1991,,Qualifying risk factor,,,,category,1976,2006
 Congestive heart failure,8076,,4048,,Qualifying risk factor,,,,category,4097,3979

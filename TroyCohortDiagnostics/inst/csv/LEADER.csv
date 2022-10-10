@@ -14,8 +14,8 @@ Prior myocardial infarction ,1464,,1400,,Established CVD (age>=50),,,,category
 Prior stroke or transient ischemic attack,730,,777,,Established CVD (age>=50),,,,category
 Prior revascularization,1835,,1803,,Established CVD (age>=50),,,,category
 ">50% stenosis of coronary, carotid, or lower extremity arteries",1188,,1191,,Established CVD (age>=50),,,,category
-Documented symptomatic CHDb,412,,406,,Established CVD (age>=50),,,,category
-Documented asymptomatic cardiac ischemiac,1241,,1231,,Established CVD (age>=50),,,,category
+Documented symptomatic CHD,412,,406,,Established CVD (age>=50),Y,,,category
+Documented asymptomatic cardiac ischemiac,1241,,1231,,Established CVD (age>=50),Y,,,category
 Heart failure NYHA II – III,653,,652,,Established CVD (age>=50),Y,,,category
 Chronic kidney diseased,1185,,1122,,Established CVD (age>=50),,,,category
 CVD risk factors (age >60 ),837,,905,,CVD risk factor,,,,category

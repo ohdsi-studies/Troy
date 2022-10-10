@@ -4,6 +4,12 @@ trials <- "PLATO"
 idx <- which(tcList[,"trial"] == trials)
 RCTbaseline <- read.csv(file.path("C:/git/Troy/TroyCohortDiagnostics/inst/csv", paste0(trials[1], ".csv")))
 RCTbaseline <- RCTbaseline %>% filter(.data$isNa != 'Y')
+RCTbaseline$target <- as.numeric(RCTbaseline$target)
+RCTbaseline$comparator <- as.numeric(RCTbaseline$comparator)
+RCTbaseline$targetsd <- as.numeric(RCTbaseline$targetsd)
+RCTbaseline$comparatorsd <- as.numeric(RCTbaseline$comparatorsd)
+RCTbaseline$targetsize <- as.numeric(RCTbaseline$targetsize)
+RCTbaseline$comparatorsize <- as.numeric(RCTbaseline$comparatorsize)
 
 cohort <- Andromeda::andromeda()  
 sql <- "select * from @cohortDatabaseSchema.@cohortTable"
@@ -30,7 +36,7 @@ covariateSettings <- createCovariateSettings(useDemographicsGender = TRUE,
                                              useDemographicsRace = TRUE,
                                              useMeasurementValueAnyTimePrior = TRUE,
                                              useDrugGroupEraLongTerm = TRUE,
-                                             useConditionOccurrenceLongTerm = TRUE,
+                                             useConditionGroupEraLongTerm = TRUE,
                                              useProcedureOccurrenceLongTerm = TRUE)
 
 covariates <- getDbCovariateData(connectionDetails = connectionDetails,
@@ -56,6 +62,31 @@ statisticsPooled <- covariates$covariates %>%
 
 statisticsPooled <- statisticsPooled %>% left_join(covariates$covariateRef) 
 statisticsPooled <- statisticsPooled %>% left_join(select(covariates$analysisRef, analysisId, isBinary), by=("analysisId"))
+
+# history feature
+covariateSettingsHistory <- createCovariateSettings(useConditionOccurrenceLongTerm = TRUE,
+                                                    useProcedureOccurrenceLongTerm = TRUE,
+                                                    endDays = -7)
+
+covariatesHistory <- getDbCovariateData(connectionDetails = connectionDetails,
+                                        cdmDatabaseSchema = cdmDatabaseSchema,
+                                        cohortDatabaseSchema = cohortDatabaseSchema,
+                                        cohortTable = cohortTable,
+                                        cohortId = c(targetNumber, comparatorNumber),
+                                        covariateSettings = covariateSettingsHistory)
+covariatesHistory$covariates <- covariatesHistory$covariates %>% left_join(covariatesHistory$covariateRef) 
+
+covariateSettingsFinalDiagnosis <- createCovariateSettings(useConditionOccurrenceShortTerm = TRUE,
+                                                           shortTermStartDays = -7)
+
+covariatesFinalDiagnosis <- getDbCovariateData(connectionDetails = connectionDetails,
+                                               cdmDatabaseSchema = cdmDatabaseSchema,
+                                               cohortDatabaseSchema = cohortDatabaseSchema,
+                                               cohortTable = cohortTable,
+                                               cohortId = c(targetNumber, comparatorNumber),
+                                               covariateSettings = covariateSettingsFinalDiagnosis)
+
+covariatesFinalDiagnosis$covariates <- covariatesFinalDiagnosis$covariates %>% left_join(covariatesFinalDiagnosis$covariateRef) 
 
 # Result for PLATO trial
 resultTablePooled <- data.frame()
@@ -96,17 +127,7 @@ resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariatesHis
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: diabets mellitus"
 
 # Medical history: MI
-covariateSettingsHistory <- createCovariateSettings(useConditionOccurrenceLongTerm = TRUE,
-                                                    useProcedureOccurrenceLongTerm = TRUE,
-                                                    endDays = -7)
 
-covariatesHistory <- getDbCovariateData(connectionDetails = connectionDetails,
-                                        cdmDatabaseSchema = cdmDatabaseSchema,
-                                        cohortDatabaseSchema = cohortDatabaseSchema,
-                                        cohortTable = cohortTable,
-                                        cohortId = c(targetNumber, comparatorNumber),
-                                        covariateSettings = covariateSettingsHistory)
-covariatesHistory$covariates <- covariatesHistory$covariates %>% left_join(covariatesHistory$covariateRef) 
 mi <- c(312327,314666,319039,434376,436706,438170,438438,438447,439693,441579,444406,761736,761737,765132,3189643,3654465,3654466,3654467,3655133,3661502,3661503,3661504,3661520,3661524,3661547,3661641,3661642,3661643,3661644,3661645,3661646,4030582,4051874,4108217,4108218,4108669,4108677,4119456,4119457,4119943,4119944,4119945,4119946,4119947,4119948,4119949,4119950,4121464,4121465,4121466,4121467,4121468,4124684,4124685,4124686,4126801,4138833,4145721,4151046,4170094,4173632,4178129,4200113,4206867,4207921,4209541,4215259,4243372,4267568,4270024,4275436,4296653,4303359,4323202,4324413,4329847,35610087,35610089,35610091,35610093,35611570,35611571,37309626,43020460,44782712,44782769,45766075,45766076,45766113,45766114,45766115,45766116,45766150,45766151,45766241,45771322,45773170,46270158,46270159,46270160,46270161,46270162,46270163,46270164,46273495,46274044)
 resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariatesHistory$covariates %>% filter(conceptId %in% mi) %>% summarise(n = n_distinct(.data$rowId)))
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: MI"
@@ -159,18 +180,6 @@ gout <- c(74892,376955,440674,762219,4035436,4035437,4035438,4035751,4035752,403
 resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariatesHistory$covariates %>% filter(conceptId %in% gout) %>% summarise(n = n_distinct(.data$rowId)))
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical history: gout"
 
-covariateSettingsFinalDiagnosis <- createCovariateSettings(useConditionOccurrenceShortTerm = TRUE,
-                                                           shortTermStartDays = -7)
-
-covariatesFinalDiagnosis <- getDbCovariateData(connectionDetails = connectionDetails,
-                                               cdmDatabaseSchema = cdmDatabaseSchema,
-                                               cohortDatabaseSchema = cohortDatabaseSchema,
-                                               cohortTable = cohortTable,
-                                               cohortId = c(targetNumber, comparatorNumber),
-                                               covariateSettings = covariateSettingsFinalDiagnosis)
-
-covariatesFinalDiagnosis$covariates <- covariatesFinalDiagnosis$covariates %>% left_join(covariatesFinalDiagnosis$covariateRef) 
-
 # Final diagnosis of STEMI
 stemi <- c(312327,319039,434376,436706,438170,438438,438447,441579,444406,761736,761737,3654465,3654466,3654467,3655133,3661502,3661503,3661504,3661520,3661524,3661547,3661641,3661642,3661643,3661644,3661645,3661646,4051874,4108217,4108218,4108669,4108677,4119456,4119457,4119943,4119944,4119945,4119946,4119947,4119948,4121464,4121465,4121466,4124684,4124685,4126801,4145721,4151046,4178129,4243372,4267568,4275436,4296653,4303359,4324413,35610091,35610093,35611570,35611571,43020460,44782712,44782769,45766075,45766076,45766113,45766114,45766115,45766116,45766150,45766151,45766241,45771322,45773170,46270158,46270159,46270160,46270161,46270162,46270163,46270164,46273495,46274044)
 resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariatesFinalDiagnosis$covariates %>% filter(conceptId %in% stemi) %>% summarise(n = n_distinct(.data$rowId)))
@@ -207,7 +216,7 @@ covariateSettings <- createCovariateSettings(useDemographicsGender = TRUE,
                                              useDemographicsRace = TRUE,
                                              useMeasurementValueAnyTimePrior = TRUE,
                                              useDrugGroupEraLongTerm = TRUE,
-                                             useConditionOccurrenceLongTerm = TRUE,
+                                             useConditionGroupEraLongTerm = TRUE,
                                              useProcedureOccurrenceLongTerm = TRUE)
 
 covariates <- getDbCovariateData(connectionDetails = connectionDetails,
@@ -382,3 +391,10 @@ RCTbaseline$OEvalue_RCT[idx] <- (resultTablePooledOE$n[idx] / sizeOE[1,2]) - (RC
 RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI$n[idx] / sizeOI[1,2]) - (RCTbaseline[idx,]$target + RCTbaseline[idx,]$comparator) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])
 
 #percent
+idx <- which(RCTbaseline$typeofstatistics=="percent")
+RCTbaseline$OEvalue_RCT[idx] <- (resultTablePooledOE$n[idx] / sizeOE[1,2]) - (((RCTbaseline[idx,]$target * RCTbaseline$targetsize[1] / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])) + ((RCTbaseline[idx,]$comparator * RCTbaseline$comparatorsize[1]) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1]))) / 100)
+RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI$n[idx] / sizeOI[1,2]) - (((RCTbaseline[idx,]$target * RCTbaseline$targetsize[1] / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])) + ((RCTbaseline[idx,]$comparator * RCTbaseline$comparatorsize[1]) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1]))) / 100)
+
+filename <- paste0(trials, '.csv')
+filename <- file.path("C:/output/TroyOhdsi", filename)
+write.csv(RCTbaseline, filename)

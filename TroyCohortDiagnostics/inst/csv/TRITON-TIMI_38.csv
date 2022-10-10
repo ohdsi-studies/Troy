@@ -7,7 +7,7 @@ Age >= 75 yr,13,,13,,Demographics,,,,percent
 Female sex,25,,27,,Demographics,,,,percent
 BMI median,28,,28,,Demographics,,,,median
 BMI IQR,25-31,,25-31,,Demographics,Y,,,IQR
-White race,92,,93,,Demographics,,,,percent
+White race,92,,93,,Demographics,Y,,,percent
 Region,0,,0,,Demographics,Y,,,percent
 Hypertension,64,,64,,Medical history,,,,percent
 Hypercholesterolemia,56,,56,,Medical history,,,,percent
@@ -19,8 +19,8 @@ Creatinine clearance <60 ml/min,11,,12,,Creatinine clearance,,,,percent
 PCI,99,,99,,Index procedure,,,,percent
 CABG,1,,1,,Index procedure,,,,percent
 Stent,94,,95,,Index procedure,,,,percent
-Bare-metal stent only,48,,47,,Index procedure,Y,,,percent
-1<= Drug-eluting stent,47,,47,,Index procedure,Y,,,percent
+Bare-metal stent only,48,,47,,Index procedure,,,,percent
+1<= Drug-eluting stent,47,,47,,Index procedure,,,,percent
 Multivessel PCI,14,,14,,Index procedure,Y,,,percent
 Heparin,66,,65,,Antithrombin use to support PCI,,,,percent
 LMWH,9,,8,,Antithrombin use to support PCI,,,,percent

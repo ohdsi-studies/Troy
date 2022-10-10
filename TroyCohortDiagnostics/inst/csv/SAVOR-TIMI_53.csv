@@ -2,8 +2,8 @@
 Age mean,65.1,,65,,Demographics,,8280,8212,mean
 Age >75,1169,,1161,,Demographics,,,,category
 Female sex,2768,,2687,,Demographics,,,,category
-White race,6241,,6166,,Demographics,,,,category
-Hispanic ethnic group,1778,,1763,,Demographics,,,,category
+White race,6241,,6166,,Demographics,Y,,,category
+Hispanic ethnic group,1778,,1763,,Demographics,Y,,,category
 Weight mean,87.7,18.7,88.1,19.4,Demographics,,,,mean
 Weight >= 80kg,5291,,5265,,Demographics,,,,category
 BMI mean,31.1,5.5,31.2,5.7,Demographics,,,,mean
