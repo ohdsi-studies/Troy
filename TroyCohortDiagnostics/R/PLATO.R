@@ -243,6 +243,31 @@ statisticsPooled <- covariates$covariates %>%
 statisticsPooled <- statisticsPooled %>% left_join(covariates$covariateRef) 
 statisticsPooled <- statisticsPooled %>% left_join(select(covariates$analysisRef, analysisId, isBinary), by=("analysisId"))
 
+# history feature
+covariateSettingsHistory <- createCovariateSettings(useConditionOccurrenceLongTerm = TRUE,
+                                                    useProcedureOccurrenceLongTerm = TRUE,
+                                                    endDays = -7)
+
+covariatesHistory <- getDbCovariateData(connectionDetails = connectionDetails,
+                                        cdmDatabaseSchema = cdmDatabaseSchema,
+                                        cohortDatabaseSchema = cohortDatabaseSchema,
+                                        cohortTable = cohortTable,
+                                        cohortId = c(targetNumber, comparatorNumber),
+                                        covariateSettings = covariateSettingsHistory)
+covariatesHistory$covariates <- covariatesHistory$covariates %>% left_join(covariatesHistory$covariateRef) 
+
+covariateSettingsFinalDiagnosis <- createCovariateSettings(useConditionOccurrenceShortTerm = TRUE,
+                                                           shortTermStartDays = -7)
+
+covariatesFinalDiagnosis <- getDbCovariateData(connectionDetails = connectionDetails,
+                                               cdmDatabaseSchema = cdmDatabaseSchema,
+                                               cohortDatabaseSchema = cohortDatabaseSchema,
+                                               cohortTable = cohortTable,
+                                               cohortId = c(targetNumber, comparatorNumber),
+                                               covariateSettings = covariateSettingsFinalDiagnosis)
+
+covariatesFinalDiagnosis$covariates <- covariatesFinalDiagnosis$covariates %>% left_join(covariatesFinalDiagnosis$covariateRef) 
+
 # Result for PLATO trial
 resultTablePooled <- data.frame()
 
@@ -389,6 +414,12 @@ RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI[idx,]$mean - (RCTbaseline[i
 idx <- which(RCTbaseline$typeofstatistics=="category")
 RCTbaseline$OEvalue_RCT[idx] <- (resultTablePooledOE$n[idx] / sizeOE[1,2]) - (RCTbaseline[idx,]$target + RCTbaseline[idx,]$comparator) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])
 RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI$n[idx] / sizeOI[1,2]) - (RCTbaseline[idx,]$target + RCTbaseline[idx,]$comparator) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])
+
+
+RCTbaseline$OEvalue <- NA
+RCTbaseline$OIvalue <- NA
+RCTbaseline$OEvalue[idx] <- resultTablePooledOE$n[idx] / sizeOE[1,2]
+RCTbaseline$OIvalue[idx] <- resultTablePooledOI$n[idx] / sizeOI[1,2]
 
 #percent
 idx <- which(RCTbaseline$typeofstatistics=="percent")

@@ -27,10 +27,10 @@ eGFR (MDRD) 60-89,1726,,1740,,Lab values,,,,category
 eGFR (MDRD) 30-59,576,,525,,Lab values,,,,category
 eGFR (MDRD) 15-29,13,,13,,Lab values,,,,category
 eGFR (MDRD) < 15,3,,0,,Lab values,,,,category
-"UACR, median, mg/g",9.7,,9.7,,Lab values,Y,,,median
-No. (%)c <30,2228,,2234,,Lab values,,,,category
-No. (%)c 30-300,645,,630,,Lab values,,,,category
-No. (%)c > 300,134,,124,,Lab values,,,,category
+"UACR, median, mg/g",9.7,,9.7,,Lab values,,,,median
+No. (%)UACR <30,2228,,2234,,Lab values,,,,category
+No. (%)UACR 30-300,645,,630,,Lab values,,,,category
+No. (%)UACR > 300,134,,124,,Lab values,,,,category
 Body mass index,30.2,5.2,30,5.1,Demographics,,,,mean
 "Glycated hemoglobin, mean",7.2,0.6,7.2,0.6,Lab values,,,,mean
 "Fasting plasma glucose, mg/dL",140,31,140,30,Lab values,,,,mean
@@ -42,7 +42,7 @@ Diabetes duration  <= 5y,1224,,1212,,Lab values,Y,,,category
 "Total cholesterol, mg/dL",177,43,177,45,Lab values,,,,mean
 "Low-density lipoprotein cholesterol, mg/dL",95,35,95,36,Lab values,,,,mean
 "High-density lipoprotein cholesterol, mg/dL",48,13,49,13,Lab values,,,,mean
-"Triglycerides, mg/dL",144,,142,,Lab values,Y,,,median
+"Triglycerides, mg/dL",144,,142,,Lab values,,,,median
 Metformin,2510,,2510,,Medication history,,,,category
 Sulfonylurea,869,,846,,Medication history,,,,category
 α-Glucosidase inhibitor,97,,92,,Medication history,,,,category

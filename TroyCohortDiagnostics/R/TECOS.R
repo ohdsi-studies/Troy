@@ -142,7 +142,7 @@ resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariates$co
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: peripheral arterial disease"
 
 # Medical history: CHF
-chf <- c(314378,316994,319835,439694,439696,439698,762002,762003,764874,4023479,4139864,4142561,4206009,4215446,4229440,4242669,4284562,4327205,36712927,36712928,36713488,37309625,43021825,43021826,43022068,44782428,44782655,44782713,44782728,44784345,44784442)
+chf <- c(314378,316994,319835,439694,439696,439698,762002,762003,764874,4023479,4139864,4142561,4206009,4215446,4229440,4242669,4284562,4327205,36712927,36712928,36713488,37309625,43021825,43021826,43022068,44782428,44782655,44782713,44782728,44784345,44784442, 316139, 443587, 45766164, 443580)
 resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariates$covariates %>% filter(conceptId %in% chf) %>% summarise(n = n_distinct(.data$rowId)))
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: Congestive Heart Failure"
 
@@ -336,7 +336,7 @@ resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariates$co
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: peripheral arterial disease"
 
 # Medical history: CHF
-chf <- c(314378,316994,319835,439694,439696,439698,762002,762003,764874,4023479,4139864,4142561,4206009,4215446,4229440,4242669,4284562,4327205,36712927,36712928,36713488,37309625,43021825,43021826,43022068,44782428,44782655,44782713,44782728,44784345,44784442)
+chf <- c(314378,316994,319835,439694,439696,439698,762002,762003,764874,4023479,4139864,4142561,4206009,4215446,4229440,4242669,4284562,4327205,36712927,36712928,36713488,37309625,43021825,43021826,43022068,44782428,44782655,44782713,44782728,44784345,44784442, 316139, 443587, 45766164, 443580)
 resultTablePooled[nrow(resultTablePooled)+1, c("n")] <- data.frame(covariates$covariates %>% filter(conceptId %in% chf) %>% summarise(n = n_distinct(.data$rowId)))
 resultTablePooled[nrow(resultTablePooled), c("covariateName")] <- "Medical histroy: Congestive Heart Failure"
 
@@ -419,6 +419,11 @@ RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI[idx,]$mean - (RCTbaseline[i
 idx <- which(RCTbaseline$typeofstatistics=="category")
 RCTbaseline$OEvalue_RCT[idx] <- (resultTablePooledOE$n[idx] / sizeOE[1,2]) - (RCTbaseline[idx,]$target + RCTbaseline[idx,]$comparator) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])
 RCTbaseline$OIvalue_RCT[idx] <- (resultTablePooledOI$n[idx] / sizeOI[1,2]) - (RCTbaseline[idx,]$target + RCTbaseline[idx,]$comparator) / (RCTbaseline$targetsize[1] + RCTbaseline$comparatorsize[1])
+
+RCTbaseline$OEvalue <- NA
+RCTbaseline$OIvalue <- NA
+RCTbaseline$OEvalue[idx] <- resultTablePooledOE$n[idx] / sizeOE[1,2]
+RCTbaseline$OIvalue[idx] <- resultTablePooledOI$n[idx] / sizeOI[1,2]
 
 #percent
 idx <- which(RCTbaseline$typeofstatistics=="percent")

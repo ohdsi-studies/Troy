@@ -4,6 +4,12 @@ trials <- ""
 idx <- which(tcList[,"trial"] == trials)
 RCTbaseline <- read.csv(file.path("C:/git/Troy/TroyCohortDiagnostics/inst/csv", paste0(trials[1], ".csv")))
 RCTbaseline <- RCTbaseline %>% filter(.data$isNa != 'Y')
+RCTbaseline$target <- as.numeric(RCTbaseline$target)
+RCTbaseline$comparator <- as.numeric(RCTbaseline$comparator)
+RCTbaseline$targetsd <- as.numeric(RCTbaseline$targetsd)
+RCTbaseline$comparatorsd <- as.numeric(RCTbaseline$comparatorsd)
+RCTbaseline$targetsize <- as.numeric(RCTbaseline$targetsize)
+RCTbaseline$comparatorsize <- as.numeric(RCTbaseline$comparatorsize)
 
 cohort <- Andromeda::andromeda()  
 sql <- "select * from @cohortDatabaseSchema.@cohortTable"
@@ -30,7 +36,7 @@ covariateSettings <- createCovariateSettings(useDemographicsGender = TRUE,
                                              useDemographicsRace = TRUE,
                                              useMeasurementValueAnyTimePrior = TRUE,
                                              useDrugGroupEraLongTerm = TRUE,
-                                             useConditionOccurrenceLongTerm = TRUE,
+                                             useConditionGroupEraLongTerm = TRUE,
                                              useProcedureOccurrenceLongTerm = TRUE)
 
 covariates <- getDbCovariateData(connectionDetails = connectionDetails,
@@ -83,7 +89,7 @@ covariateSettings <- createCovariateSettings(useDemographicsGender = TRUE,
                                              useDemographicsRace = TRUE,
                                              useMeasurementValueAnyTimePrior = TRUE,
                                              useDrugGroupEraLongTerm = TRUE,
-                                             useConditionOccurrenceLongTerm = TRUE,
+                                             useConditionGroupEraLongTerm = TRUE,
                                              useProcedureOccurrenceLongTerm = TRUE)
 
 covariates <- getDbCovariateData(connectionDetails = connectionDetails,
@@ -110,7 +116,7 @@ statisticsPooled <- covariates$covariates %>%
 statisticsPooled <- statisticsPooled %>% left_join(covariates$covariateRef) 
 statisticsPooled <- statisticsPooled %>% left_join(select(covariates$analysisRef, analysisId, isBinary), by=("analysisId"))
 
-# Result for PLATO trial
+# Result for XX trial
 resultTablePooled <- data.frame()
 
 

@@ -15,7 +15,7 @@ eGFR (MDRD) >= 60,1294,,1337,,Lab values,,,,category
 eGFR (MDRD) >= 45 to <60,690,,658,,Lab values,,,,category
 eGFR (MDRD) >= 30 to <45,994,,944,,Lab values,,,,category
 eGFR (MDRD) < 60,516,,546,,Lab values,,,,category
-"UACR, median, mg/g",162,,162,,Lab values,Y,,,median
+"UACR, median, mg/g",162,,162,,Lab values,,,,median
 No. (%)c <30,696,,696,,Lab values,,,,category
 No. (%)c 30-300,1463,,1431,,Lab values,,,,category
 No. (%)c > 300,1333,,1357,,Lab values,,,,category
