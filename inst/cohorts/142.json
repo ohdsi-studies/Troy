@@ -7294,7 +7294,7 @@
         "Groups": []
       },
       "name": "No other antidiabetic druts",
-      "description": "Any history and/or current treatment with other antidiabetic drugs (e.g. rosiglitazone, pioglitazone, GLP-1 analogue/agonists, DPP-IV inhibitors or any insulin) prior to informed consent. \n\n\nNote 1: This also includes clinical trials where these antidiabetic drugs have been provided to the patient. \nNote 2: Previous short term use of any insulin (up to two consecutive weeks) is allowed (e.g. during hospitalisation) if taken at least 8 weeks prior informed consent"
+      "description": " "
     },
     {
       "expression": {
@@ -7365,7 +7365,7 @@
         "Groups": []
       },
       "name": "No uncontrolled hyperglycaemia",
-      "description": "Uncontrolled hyperglycaemia with a glucose level >240 mg/dl (>13.3 mmol/L) after an overnight fast during placebo run-in and confirmed by a second measurement (not on the same day)."
+      "description": " "
     },
     {
       "expression": {
@@ -7519,7 +7519,7 @@
         }]
       },
       "name": "No Liver disease",
-      "description": "Active liver disease or impaired hepatic function, defined by serum levels of either ALT (SGPT), AST (SGOT), or alkaline phosphatase above 3 x upper limit of normal (ULN) as determined at Visit 1a."
+      "description": " "
     },
     {
       "expression": {
@@ -7835,7 +7835,7 @@
         "Groups": []
       },
       "name": "No pregnant",
-      "description": "Pre-menopausal women (last menstruation #1 year prior to informed consent) who:\n(a) are nursing or pregnant,\n(b) or are of child-bearing potential and are not practicing an acceptable method of birth control (acceptable methods of birth control include tubal ligation, transdermal patch, intra uterine devices/systems (IUDs/IUSs), oral, implantable or injectable contraceptives, sexual abstinence (if allowed by local authorities), double barrier method and vasectomised partner) or do not plan to continue using acceptable method of birth control throughout the study and do not agree to submit to periodic pregnancy testing during participation in the trial."
+      "description": " "
     },
     {
       "expression": {

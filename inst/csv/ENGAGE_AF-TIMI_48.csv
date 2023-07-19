@@ -1,7 +1,7 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age median,72,,72,,Demographics,,14069,7036,median,2,1,,Y
 Age interquartile range,64-78,,64-78,,Demographics,,,,IQR,2,1,,
-Female sex,5399,,2641,,Demographics,,,,n,1,8532,,Y
+Female sex,5399,,2641,,Demographics,,,,n,1,8532,,
 Region,0,,0,,Demographics,Y,,,n,,,,
 Paroxysmal atrial fibrillation,0,,0,,Paroxysmal atrial fibrillation,,,,n,210,4154290,,
 Age >= 75yr,5654,,2820,,Qualifying risk factor,,,,n,2,1,covariateValue >= 75,

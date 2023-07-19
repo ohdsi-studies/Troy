@@ -3439,7 +3439,7 @@
         "Groups": []
       },
       "name": "No severe hypoglycemia",
-      "description": "Patient has a history of กร2 episodes of severe hypoglycemia during the 12 months prior to enrollment. \n- Severe hypoglycemia (hypoglycemia requiring assistance) refers to instances in which the patient was sufficiently disoriented or incapacitated as to require help from another individual or from medical personnel (whether or not this assistance was actually provided)."
+      "description": " "
     },
     {
       "expression": {
@@ -3706,7 +3706,7 @@
         "DemographicCriteriaList": [],
         "Groups": []
       },
-      "name": "Patient has a history or current evidence of any condition, therapy, lab abnormality, or other circumstance which, in the opinion of the investigator or coordinator, might pose a risk to the patient, make participation not in the patient\u2019s best interest, "
+      "name": "Patient has a history or current evidence of any condition, therapy, lab abnormality, or other circumstance which, in the opinion of the investigator or coordinator, might pose a risk to the patient, make participation not in the patient"
     },
     {
       "expression": {

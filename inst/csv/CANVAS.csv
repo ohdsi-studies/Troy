@@ -1,6 +1,6 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age mean,63.2,8.3,63.4,8.2,Demographics,,5795,4347,mean,2,1,,Y
-Female sex,2036,,1597,,Demographics,,,,n,1,8532,,Y
+Female sex,2036,,1597,,Demographics,,,,n,1,8532,,
 Race,0,,0,,Demographics,Y,,,n,,,,
 Current smoker,1020,,786,,Demographics,Y,,,n,,,,
 History of hypertension,5188,,3937,,Medical history,,,,n,210,320128,,
@@ -28,4 +28,4 @@ eGFR — ml/min/1.73 m²,76.7,20.3,76.2,20.8,Lab values,,,,mean,705,3029859,,Y
 Median albumin-to-creatinine ratio ,12.4,,12.1,,Albumin measurements,,,,median,705,3020682,,Y
 Normoalbuminuria — no.,4012,,2995,,Albumin measurements,,,,n,705,3024561,covariateValue < 30,
 Microalbuminuria — no.,1322,,944,,Albumin measurements,,,,n,705,3024561,covariateValue >= 30 & covariateValue < 300,
-Macroalbuminuria — no.,406,,354,,Albumin measurements,,,,n,705,3024561,covariateValue <= 300,
+Macroalbuminuria — no.,406,,354,,Albumin measurements,,,,n,705,3024561,covariateValue >= 300,

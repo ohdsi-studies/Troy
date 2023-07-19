@@ -1,7 +1,7 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age median,70,,70,,Demographics,,9120,9081,median,2,1,,Y
 Age interquartile range,63-76,,63-76,,Demographics,,,,IQR,2,1,,
-Female sex,3234,,3182,,Demographics,,,,n,1,8532,,Y
+Female sex,3234,,3182,,Demographics,,,,n,1,8532,,
 Region,0,,0,,Demographics,Y,,,n,,,,
 Median systolic blood pressure — mm Hg,130,,130,,Demographics,,,,median,705,3004249,,Y
 Interquartile range systolic blood pressure ,120-140,,120-140,,Demographics,,,,IQR,705,3004249,,

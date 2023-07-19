@@ -1,7 +1,7 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age mean,63.9,9.5,64.2,9.5,Demographics,,3023,3010,mean,2,1,,Y
-Sex male,1838,,1781,,Demographics,,,,n,1,8507,,Y
-Sex female,1185,,1229,,Demographics,,,,n,1,8532,,Y
+Sex male,1838,,1781,,Demographics,,,,n,1,8507,,
+Sex female,1185,,1229,,Demographics,,,,n,1,8532,,
 Race,0,,0,,Demographics,Y,,,n,,,,
 Ethnicity,0,,0,,Demographics,Y,,,n,,,,
 Region,0,,0,,Demographics,Y,,,n,,,,

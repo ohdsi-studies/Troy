@@ -1,7 +1,7 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 median age — yr,62,,62,,Demographics,,9333,9291,median,2,1,,Y
 Age ≥75 yr,1396,,1482,,Demographics,,,,n,2,1,covariateValue >= 75,
-Female sex,2655,,2633,,Demographics,,,,n,1,8532,,Y
+Female sex,2655,,2633,,Demographics,,,,n,1,8532,,
 Median body weight,80,,80,,Demographics,,,,median,705,3025315,,Y
 Body weight <60kg,652,,660,,Demographics,,,,n,705,3025315,covariateValue > 60,
 BMI — median,27,,27,,Demographics,,,,median,705,40762636,,Y

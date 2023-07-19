@@ -6757,7 +6757,7 @@
         "Count": 1
       },
       "name": "Insufficient glycemic control",
-      "description": "defined as either:\n(1) Drug-naive (no anti-diabetes agents for >=12 weeks prior to randomization) + HbA1c ¡Ã7.0% (¡Ã53 mmol/mol)  and ¡Â9.0% (¡Â75 mmol/mol)  at screening\n(2) Taking any background anti-diabetes therapy (except pioglitazone in Japan) + HbA1c ¡Ã7.0% (¡Ã53 mmol/mol)  and ¡Â10.0% (¡Â86 mmol/mol)  at screening\n<U+2013> Background anti-diabetes therapy had to be unchanged for ¡Ã12 weeks prior to randomization\n<U+2013> If background anti-diabetes therapy included insulin, insulin dose had to be unchanged by >10% from the dose at randomization in the previous 12 weeks\n"
+      "description": "defined as either:\n(1) Drug-naive (no anti-diabetes agents for >=12 weeks prior to randomization) + HbA1c ¡Ã7.0% (¡Ã53 mmol/mol)  and ¡Â9.0% (¡Â75 mmol/mol)  at screening"
     },
     {
       "expression": {
@@ -8066,7 +8066,7 @@
         "Groups": []
       },
       "name": "No pregnant",
-      "description": "Pre-menopausal women (last menstruation ¡Â1 year prior to informed consent) who were nursing, pregnant, or of child-bearing potential and were not practicing an acceptable method of birth control, or did not plan to continue using this method throughout the study, or did not agree to submit to periodic pregnancy testing during the trial"
+      "description": "Pre-menopausal women (last menstruation ¡Â1 year prior to informed consent) who were nursing, pregnant, or of child-bearing potential and were not practicing an acceptable method of birth control"
     },
     {
       "expression": {

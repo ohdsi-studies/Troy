@@ -1,5 +1,5 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
-Male sex,3011,,2992,,Demographics,,4668,4672,n,1,8507,,Y
+Male sex,3011,,2992,,Demographics,,4668,4672,n,1,8507,,
 "Age mean, y",64.2,,64.4,,Demographics,,,,mean,2,1,,Y
 "Diabetes duration, y",12.8,,12.9,,Diabetes duration,Y,,,continuous,,,,
 Geographic region,0,,0,,Demographics,Y,,,n,,,,

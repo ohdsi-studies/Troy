@@ -1,7 +1,7 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age mean,66.1,9.1,65.6,9.1,Demographics,,3494,3485,mean,2,1,,Y
-Sex male,2148,,2242,,Demographics,,,,n,1,8507,,Y
-Sex female,1346,,1243,,Demographics,,,,n,1,8532,,Y
+Sex male,2148,,2242,,Demographics,,,,n,1,8507,,
+Sex female,1346,,1243,,Demographics,,,,n,1,8532,,
 Race,0,,0,,Demographics,Y,,,n,,,,
 Region,0,,0,,Demographics,Y,,,n,,,,
 Smoking status,0,,0,,Demographics,Y,,,n,,,,
@@ -31,7 +31,7 @@ Hemoglobin A1c,7.9,1,8,1,Lab values,,,,mean,705,3004410,,Y
 "High-density lipoprotein cholesterol, mg/dL",45,13,44,13,Lab values,,,,mean,705,3007070,,Y
 "Triglycerides, mg/dL",190,136,187,130,Lab values,,,,mean,705,3022192,,Y
 "≥1 Glucose-lowering medication, No. (%) ",3378,,3376,,Glucose-lowering medication,,,,n,,,,
-Metformin,1881,,1927,,Glucose-lowering medication,,,,n,410,21600747,,
+Metformin,1881,,1927,,Glucose-lowering medication,,,,n,410,1503297,,
 Sulfonylurea,1102,,1140,,Glucose-lowering medication,,,,n,410,21600749,,
 Insulin,2056,,1995,,Glucose-lowering medication,,,,n,410,21600713,,
 "No. of background glucose-lowering therapies, No. (%)",0,,0,,Background glucose-lowering therapies,Y,,,n,,,,

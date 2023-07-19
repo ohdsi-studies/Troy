@@ -1,6 +1,6 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age years,65.4,7.9,65.5,8,Demographics,,7332,7339,mean,2,1,,Y
-Female sex,2134,,2163,,Demographics,,,,n,1,8532,,Y
+Female sex,2134,,2163,,Demographics,,,,n,1,8532,,
 Race/Ethnicity,0,,0,,Demographics,Y,,,n,,,,
 Hispanic or Latino,0,,0,,Demographics,Y,,,n,,,,
 Duration of diabetes (years),11.6,8.1,11.6,8.1,Duration of diabetes,Y,,,continuous,,,,

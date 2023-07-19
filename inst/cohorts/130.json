@@ -7799,7 +7799,7 @@
         "Groups": []
       },
       "name": "HbA1c between 7% and 10.5%",
-      "description": "Man or woman with a diagnosis of type 2 diabetes with glycated hemoglobin level ¡Ã7.0% to\n¡Â10.5% at screening and be either-\no<U+00A0><U+00A0> (1) not currently on antihyperglycemic agent (AHA) therapy or<U+00A0>\no<U+00A0><U+00A0> (2) on AHA monotherapy or combination therapy with any approved class of\nagents: e.g., sulfonylurea, metformin, peroxisome proliferator-activated receptor gamma\n(PPAR¥ã) agonist, alpha-glucosidase inhibitor, glucagon-like peptide-1 (GLP-1) analogue,\ndipeptidyl peptidase-4 (DPP-4) inhibitor, or insulin.\n"
+      "description": " "
     },
     {
       "expression": {
@@ -8385,7 +8385,7 @@
         "Count": 1
       },
       "name": "Postmenopausal",
-      "description": "Women must be:\n<U+2013> Postmenopausal, defined as >45 years of age with amenorrhea for at least 18 months, or >45 years of age with amenorrhea for at least 6 months and less than 18 months and a serum follicle stimulating hormone (FSH) level >40 IU/ml, \n<U+2013> or Surgically sterile (have had a hysterectomy or bilateral oophorectomy, tubal ligation), or otherwise be incapable of pregnancy, \n<U+2013> or Heterosexually active and practicing a highly effective method of birth control, including hormonal prescription oral contraceptives, contraceptive injections, contraceptive patch, intrauterine device, double-barrier method (e.g., condoms, diaphragm, or cervical cap with spermicidal foam, cream, or gel), or male partner sterilization, consistent with local regulations regarding use of birth control methods for subjects participating in clinical trials, for the dur<U+2013> or Not heterosexually active.\nNote: subjects who are not heterosexually active at screening must agree to utilize a highly effective method of birth control if they become heterosexually active during their\nparticipation in the study.ation of their participation in the study, \n"
+      "description": " "
     },
     {
       "expression": {
@@ -8395,7 +8395,7 @@
         "Groups": []
       },
       "name": "Other inclusion criteria #1",
-      "description": "Women of childbearing potential must have a negative urine ¥â-human chorionic\ngonadotropin (¥â-hCG) pregnancy test at screening and baseline (predose, Day 1)."
+      "description": " "
     },
     {
       "expression": {
@@ -8490,7 +8490,7 @@
         "Groups": []
       },
       "name": "No history of diabetic ketoacidosis",
-      "description": "History of diabetic ketoacidosis, type 1 diabetes, pancreas or beta-cell transplantation, or diabetes secondary to pancreatitis or pancreatectomy."
+      "description": " "
     },
     {
       "expression": {
@@ -8500,7 +8500,7 @@
         "Groups": []
       },
       "name": "On an AHA and not on a stable regimen (i.e., agents and doses) for at least 8 weeks before the screening visit and through the screening/run-in period. ",
-      "description": "Note: a stable dose of insulin is defined as no change in the insulin regimen (i.e., type[s] of insulin) and ¡Â15% change in the total daily dose of insulin (averaged over 1 week to account for day-to-day variability)."
+      "description": " "
     },
     {
       "expression": {
@@ -8510,7 +8510,7 @@
         "Groups": []
       },
       "name": "For patients on a sulfonylurea agent or on insulin: fasting fingerstick glucose at site <110 mg/dl (<6 mmol/l) at Baseline/Day 1.",
-      "description": "Note: at the investigator\u2019s discretion, based upon an assessment of recent self-monitored\nblood glucose (SMBG) values, subjects meeting either of these fingerstick glucose exclusion\ncriteria may continue the single-blind placebo and return to the investigational site within\n14 days and may be randomized if the repeat fasting fingerstick value no longer meets the\nexclusion criterion. Subjects with fingerstick glucose >270 mg/dl (>15 mmol/l) may have\ntheir AHA regimen adjusted and be rescreened once on a stable regimen for at least 8 weeks."
+      "description": " "
     },
     {
       "expression": {
@@ -8544,7 +8544,7 @@
         "Groups": []
       },
       "name": "No history of hypoglycemic episode ",
-      "description": "History of one or more severe hypoglycemic episode within 6 months before screening.\nNote: a severe hypoglycemic episode is defined as an event that requires the help of\nanother person."
+      "description": " "
     },
     {
       "expression": {
@@ -8753,7 +8753,7 @@
         }]
       },
       "name": "No renal disease",
-      "description": "Renal disease that required treatment with immunosuppressive therapy or a history of\ndialysis or renal transplant.\nNote: subjects with a history of treated childhood renal disease, without sequelae, may\nparticipate."
+      "description": " "
     },
     {
       "expression": {
@@ -8914,7 +8914,7 @@
         "Groups": []
       },
       "name": "No CV within 3 months",
-      "description": "MI, unstable angina, revascularization procedure, or cerebrovascular accident within 3\nmonths before screening, or a planned revascularization procedure, or history of New York\nHeart Association (NYHA) Class IV cardiac disease."
+      "description": " "
     },
     {
       "expression": {
@@ -9105,7 +9105,7 @@
         "Groups": []
       },
       "name": "No eGFR<30",
-      "description": "Estimated glomerular filtration rate (eGFR) <30 ml/min/1.73 m2 at screening (provided by\nthe central laboratory)\n<U+2013> For subjects taking metformin: at screening, serum creatinine ¡Ã1.4 mg/dl (124 ¥ìmol/l) for\nmen or ¡Ã1.3 mg/dl (115 ¥ìmol/l) for women; no contraindication to the use of metformin\n(including eGFR) based on the label of the country of investigational site"
+      "description": " "
     },
     {
       "expression": {
@@ -9174,7 +9174,7 @@
         "Groups": []
       },
       "name": "No liver lab abnormality",
-      "description": "ALT levels >2.0 times the upper limit of normal (ULN) \nor total bilirubin >1.5 times the ULN at screening, \nunless in the opinion of the investigator and as agreed upon by the sponsor\u2019s medical officer, the findings are consistent with Gilbert\u2019s disease."
+      "description": " "
     },
     {
       "expression": {
@@ -9301,7 +9301,7 @@
         "Groups": []
       },
       "name": "No hematological disorder",
-      "description": "Subject has a current clinically important hematological disorder (e.g., symptomatic\nanemia, proliferative bone marrow disorder, thrombocytopenia).\n- ICD-9 Diagnosis Codes: 238.4x, 289.83, 238.71, 280.x-285.x, 287.3x, 287.4x, 287.5x\n"
+      "description": " "
     },
     {
       "expression": {
@@ -9344,7 +9344,7 @@
         "Groups": []
       },
       "name": "No major surgery",
-      "description": "Major surgery (i.e., requiring general anesthesia) within 3 months of the screening visit or\nany surgery planned during the subject\u2019s expected participation in the study (except minor\nsurgery; i.e., outpatient surgery under local anesthesia)."
+      "description": " "
     },
     {
       "expression": {
@@ -9448,7 +9448,7 @@
         "Groups": []
       },
       "name": "No Current use of a corticosteroid or immunosuppressive agent",
-      "description": "Current use of a corticosteroid medication or immunosuppressive agent, or likely to require\ntreatment with a corticosteroid medication (for longer than 2 weeks in duration) or an\nimmunosuppressive agent. Note: subjects using inhaled, intranasal, intra-articular, or\ntopical corticosteroids, or corticosteroids in therapeutic replacement doses may\nparticipate."
+      "description": " "
     },
     {
       "expression": {
@@ -9458,7 +9458,7 @@
         "Groups": []
       },
       "name": "Other exclusion criteria #5",
-      "description": "Received an active investigational drug (including vaccines) or used an investigational\nmedical device within 3 months before Day 1/baseline or received at least one dose of\ncanagliflozin in a prior study."
+      "description": " "
     },
     {
       "expression": {

@@ -1,6 +1,6 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age mean,63.1,8.6,63.2,8.8,Demographics,,4687,2333,mean,2,1,,Y
-Male no.,3336,,1680,,Demographics,,,,n,1,8507,,Y
+Male no.,3336,,1680,,Demographics,,,,n,1,8507,,
 Race no.,0,,0,,Demographics,Y,,,n,,,,
 Ethnicity no.,0,,0,,Demographics,Y,,,n,,,,
 Region no.,0,,0,,Demographics,Y,,,n,,,,

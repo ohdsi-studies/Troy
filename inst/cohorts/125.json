@@ -8035,7 +8035,7 @@
         "Groups": []
       },
       "name": "No current CV event",
-      "description": "Acute cardiovascular event\n[e.g., acute coronary syndrome (ACS), transient ischemic attack (TIA), stroke, any revascularization, decompensated HF(heart failure), sustained tachycardia <8 weeks prior to randomization. \n\nPatients with acute cardiovascular events can be enrolled in the run-in period as long as randomization does not occur within 8 weeks of the event."
+      "description": "Acute cardiovascular event\n[e.g., acute coronary syndrome (ACS), transient ischemic attack (TIA), stroke, any revascularization, decompensated HF(heart failure), sustained tachycardia <8 weeks prior to randomization."
     },
     {
       "expression": {
@@ -8545,7 +8545,7 @@
         "DemographicCriteriaList": [],
         "Groups": []
       },
-      "name": "Individuals at risk for poor protocol or medication compliance during run-in period(reasonable compliance defined as 80 <U+2013> 120%, unless a reason for non-compliance is judged acceptable by the Investigator).  If for any reason, the Investigator believes tha"
+      "name": "Individuals at risk for poor protocol or medication compliance during run-in period(reasonable compliance defined as 80 <U+2013> 120%, unless a reason for non-compliance is judged acceptable by the Investigator)."
     },
     {
       "expression": {

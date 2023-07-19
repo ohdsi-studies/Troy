@@ -1,6 +1,6 @@
 ﻿characteristics,target,targetSd,comparator,comparatorSd,tag,isNa,targetSize,comparatorSize,statistics,analysisId,conceptIds,hasValue,summary
 Age mean,63.9,6.8,64,6.8,Demographics,,8582,8578,mean,2,1,,Y
-Female sex,3171,,3251,,Demographics,,,,n,1,8532,,Y
+Female sex,3171,,3251,,Demographics,,,,n,1,8532,,
 Race,0,,0,,Demographics,Y,,,n,,,,
 Region,0,,0,,Demographics,Y,,,n,,,,
 BMI mean,32.1,6,32,6.1,Demographics,,,,mean,705,40762636,,Y
