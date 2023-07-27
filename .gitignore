@@ -4,3 +4,5 @@
 .Ruserdata
 *.tmp
 .DS_Store
+~$*.xlsx
+~$*.docx
