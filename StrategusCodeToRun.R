@@ -1,12 +1,12 @@
 # install the network package
-install.packages('remotes')
-remotes::install_github("OHDSI/Strategus", ref="results-upload")
+#install.packages('remotes')
+#remotes::install_github("OHDSI/Strategus", ref="results-upload")
 library(Strategus)
 
 ##=========== START OF INPUTS ==========
-connectionDetailsReference <- "Jmdc"
-workDatabaseSchema <- 'scratch_asena5'
-cdmDatabaseSchema <- 'cdm_jmdc_v2325'
+connectionDetailsReference <- "YUHS"
+workDatabaseSchema <- 'jaehyeongcho'
+cdmDatabaseSchema <- 'YUHS_CDM'
 outputLocation <- '~/output/troy'
 minCellCount <- 5
 cohortTableName <- "troy"
@@ -46,7 +46,7 @@ executionSettings <- createCdmExecutionSettings(
 # Note: this environmental variable should be set once for each compute node
 Sys.setenv("INSTANTIATED_MODULES_FOLDER" = file.path(outputLocation, "StrategusInstantiatedModules"))
 
-execute(
+troyExecute(
   analysisSpecifications = analysisSpecifications,
   executionSettings = executionSettings,
   executionScriptFolder = file.path(outputLocation, connectionDetailsReference, "strategusExecution"),

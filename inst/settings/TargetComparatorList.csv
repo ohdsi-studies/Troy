@@ -1,27 +1,27 @@
 ﻿targetId,comparatorId,design,description,trialName
-122,123,RCT,Population replicated as close as possible to the original RCT,LEADER
-125,126,RCT,Population replicated as close as possible to the original RCT,DECLARE-TIMI_58
-127,128,RCT,Population replicated as close as possible to the original RCT,EMPA-REG_OUTCOME
-129,130,RCT,Population replicated as close as possible to the original RCT,CANVAS
-135,136,RCT,Population replicated as close as possible to the original RCT,CARMELINA
-137,138,RCT,Population replicated as close as possible to the original RCT,TECOS
-139,140,RCT,Population replicated as close as possible to the original RCT,SAVOR-TIMI_53
-141,142,RCT,Population replicated as close as possible to the original RCT,CAROLINA
-117,118,RCT,Population replicated as close as possible to the original RCT,TRITON-TIMI_38
-115,116,RCT,Population replicated as close as possible to the original RCT,PLATO
-107,108,RCT,Population replicated as close as possible to the original RCT,ROCKET-AF
-105,106,RCT,Population replicated as close as possible to the original RCT,ARISTOTLE
-109,110,RCT,Population replicated as close as possible to the original RCT,ENGAGE_AF-TIMI_48
-124,134,Indication,Population of indications for drug,LEADER
-131,134,Indication,Population of indications for drug,DECLARE-TIMI_58
-132,134,Indication,Population of indications for drug,EMPA-REG_OUTCOME
-133,134,Indication,Population of indications for drug,CANVAS
-143,146,Indication,Population of indications for drug,CARMELINA
-144,146,Indication,Population of indications for drug,TECOS
-145,146,Indication,Population of indications for drug,SAVOR-TIMI_53
-143,147,Indication,Population of indications for drug,CAROLINA
-120,121,Indication,Population of indications for drug,TRITON-TIMI_38
-119,121,Indication,Population of indications for drug,PLATO
-112,114,Indication,Population of indications for drug,ROCKET-AF
-111,114,Indication,Population of indications for drug,ARISTOTLE
-113,114,Indication,Population of indications for drug,ENGAGE_AF-TIMI_48
+324,325,RCT,Population replicated as close as possible to the original RCT,LEADER
+326,327,RCT,Population replicated as close as possible to the original RCT,DECLARE-TIMI_58
+328,329,RCT,Population replicated as close as possible to the original RCT,EMPA-REG_OUTCOME
+330,331,RCT,Population replicated as close as possible to the original RCT,CANVAS
+332,333,RCT,Population replicated as close as possible to the original RCT,CARMELINA
+334,335,RCT,Population replicated as close as possible to the original RCT,TECOS
+336,337,RCT,Population replicated as close as possible to the original RCT,SAVOR-TIMI_53
+338,339,RCT,Population replicated as close as possible to the original RCT,CAROLINA
+340,341,RCT,Population replicated as close as possible to the original RCT,TRITON-TIMI_38
+342,343,RCT,Population replicated as close as possible to the original RCT,PLATO
+344,345,RCT,Population replicated as close as possible to the original RCT,ROCKET-AF
+346,347,RCT,Population replicated as close as possible to the original RCT,ARISTOTLE
+348,349,RCT,Population replicated as close as possible to the original RCT,ENGAGE_AF-TIMI_48
+351,352,Indication,Population of indications for drug,LEADER
+353,354,Indication,Population of indications for drug,DECLARE-TIMI_58
+355,356,Indication,Population of indications for drug,EMPA-REG_OUTCOME
+357,358,Indication,Population of indications for drug,CANVAS
+359,360,Indication,Population of indications for drug,CARMELINA
+361,362,Indication,Population of indications for drug,TECOS
+363,364,Indication,Population of indications for drug,SAVOR-TIMI_53
+365,366,Indication,Population of indications for drug,CAROLINA
+367,368,Indication,Population of indications for drug,TRITON-TIMI_38
+369,370,Indication,Population of indications for drug,PLATO
+371,372,Indication,Population of indications for drug,ROCKET-AF
+373,374,Indication,Population of indications for drug,ARISTOTLE
+375,376,Indication,Population of indications for drug,ENGAGE_AF-TIMI_48
