@@ -1,4 +1,4 @@
-Trials Replication through Observational study by Yonsei (TROY)
+Trials Replication through Observational study across OHDSI (TROY)
 =============================================================================
 
 - Analytics use case(s): **Population-Level Estimation**
@@ -8,7 +8,7 @@ Trials Replication through Observational study by Yonsei (TROY)
 - Study lead forums tag: **[Seng Chan You](https://dr-you-group.github.io/profiles/)**
 - Study start date: **1 January 2022**
 - Study end date: **-**
-- Protocol: **[Protocol](https://github.com/JaehyeongCho/Troy/blob/master/documents/TROY_Protocol_v0.3.docx)**
+- Protocol: **[Protocol](https://github.com/ohdsi-studies/Troy/blob/master/documents/TROY_Protocol_v0.4.docx)**
 - Publications: **-**
 - Results explorer: **-**
 
