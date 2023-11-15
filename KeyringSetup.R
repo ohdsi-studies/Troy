@@ -12,10 +12,9 @@ if (Sys.getenv("STRATEGUS_KEYRING_PASSWORD") == "") {
 
 # Provide your environment specific values ------
 dbms <- "sql server"
-connectionString <- "jdbc:sqlserver://10.19.10.248:1433"
-username <- 'sa'
-password <- keyring::key_get('sa')
-
+connectionString <- "jdbc:sqlserver://your.server.goes.here:5439/your_cdm_database"
+username <- "username-goes-here"
+password = "password-goes-here"
 
 
 # Run the rest to setup keyring ----------

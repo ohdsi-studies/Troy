@@ -7,7 +7,7 @@ library(Strategus)
 connectionDetailsReference <- "YUHS"
 workDatabaseSchema <- 'jaehyeongcho'
 cdmDatabaseSchema <- 'YUHS_CDM'
-outputLocation <- '~/output/troy'
+outputLocation <- '~/output'
 minCellCount <- 5
 cohortTableName <- "troy"
 
@@ -24,7 +24,7 @@ connectionDetails = DatabaseConnector::createConnectionDetails(
 # DO NOT MODIFY BELOW THIS POINT
 ##################################
 analysisSpecifications <- ParallelLogger::loadSettingsFromJson(
-  fileName = "inst/analysisSpecification.json"
+  fileName = "~/git/Troy/inst/analysisSpecification.json"
 )
 
 storeConnectionDetails(
@@ -46,9 +46,16 @@ executionSettings <- createCdmExecutionSettings(
 # Note: this environmental variable should be set once for each compute node
 Sys.setenv("INSTANTIATED_MODULES_FOLDER" = file.path(outputLocation, "StrategusInstantiatedModules"))
 
-troyExecute(
+execute(
   analysisSpecifications = analysisSpecifications,
   executionSettings = executionSettings,
   executionScriptFolder = file.path(outputLocation, connectionDetailsReference, "strategusExecution"),
   keyringName = "troy"
 )
+
+source('~/git/Troy/R/troyFunction.R')
+
+troyFunction(cohortDatabaseSchema=executionSettings$workDatabaseSchema,
+            cohortTable=executionSettings$cohortTableNames$cohortTable,
+            connectionDetails=connectionDetails,
+            outputFolder=file.path(outputLocation, connectionDetailsReference, "strategusOutput"))
