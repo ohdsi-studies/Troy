@@ -158,6 +158,7 @@ for (moduleFolder in moduleFolders) {
 DatabaseConnector::disconnect(connection)
 
 troyFiles <- list.files(path = strategusOutputPath, recursive = FALSE, pattern = "\\.csv$")
+setwd(strategusOutputPath)
 zip_path <- file.path(outputLocation, connectionDetailsReference, "troyResults.zip")
 system(paste("zip", zip_path, paste(troyFiles, collapse = " ")))
 
