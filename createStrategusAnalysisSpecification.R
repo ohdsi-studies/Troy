@@ -551,7 +551,7 @@ cohortDiagnosticsModuleSpecifications <- createCohortDiagnosticsModuleSpecificat
   runVisitContext = TRUE,
   runBreakdownIndexEvents = TRUE,
   runIncidenceRate = TRUE,
-  runCohortRelationship = TRUE,
+  runCohortRelationship = FALSE,
   runTemporalCohortCharacterization = FALSE,
   minCharacterizationMean = 0.0001,
   temporalCovariateSettings = getDefaultCovariateSettings(),
