@@ -16,7 +16,7 @@ We initiated ‘Trials Replication through Observational study across OHDSI (TRO
 
 How to run
 ============
-This file is a docker image that revised errors in StrategusInstantiatedModules.
+This **[file](https://drive.google.com/file/d/1FrZB8vzigtWG8wzGbQS7zCCAw1VR5XNe/view?usp=drive_link)** is a docker image that revised errors in StrategusInstantiatedModules.
 
 When you open this file, you can see StrategusInstantiatedModules that are already installed and Strategus project will skip downloading modules step.
 
