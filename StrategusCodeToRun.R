@@ -7,7 +7,7 @@ library(Strategus)
 connectionDetailsReference <- "YUHS"
 workDatabaseSchema <- 'jaehyeongcho'
 cdmDatabaseSchema <- 'YUHS_CDM'
-outputLocation <- '~/output'
+outputLocation <- '~/output' #DO NOT TOUCH
 minCellCount <- 5
 cohortTableName <- "troy"
 
