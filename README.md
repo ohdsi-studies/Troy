@@ -49,7 +49,7 @@ The usage instructions for this file are as follows:
    ```
    docker run -it -p 8787:8787 --name container_name -e PASSWORD=pass_word image_name
    ```
-   Example: `docker run -it -p 8787:8787 --name troy -e PASSWORD=abcd troy:1.0`
+   Example: `docker run -it -p 8787:8787 --name r_sos_fqs -e PASSWORD=abcd troy:1.0`
 
  
 
