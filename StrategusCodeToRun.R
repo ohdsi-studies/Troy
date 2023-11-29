@@ -1,13 +1,13 @@
 # install the network package
-install.packages('remotes')
-remotes::install_github("OHDSI/Strategus", ref="results-upload")
+#install.packages('remotes')
+#remotes::install_github("OHDSI/Strategus", ref="results-upload")
 library(Strategus)
 
 ##=========== START OF INPUTS ==========
-connectionDetailsReference <- "Jmdc"
-workDatabaseSchema <- 'scratch_asena5'
-cdmDatabaseSchema <- 'cdm_jmdc_v2325'
-outputLocation <- '~/output/troy'
+connectionDetailsReference <- "YUHS"
+workDatabaseSchema <- 'jaehyeongcho'
+cdmDatabaseSchema <- 'YUHS_CDM'
+outputLocation <- '~/output' #DO NOT TOUCH
 minCellCount <- 5
 cohortTableName <- "troy"
 
@@ -24,7 +24,7 @@ connectionDetails = DatabaseConnector::createConnectionDetails(
 # DO NOT MODIFY BELOW THIS POINT
 ##################################
 analysisSpecifications <- ParallelLogger::loadSettingsFromJson(
-  fileName = "inst/analysisSpecification.json"
+  fileName = "~/git/Troy/inst/analysisSpecification.json"
 )
 
 storeConnectionDetails(
@@ -52,3 +52,10 @@ execute(
   executionScriptFolder = file.path(outputLocation, connectionDetailsReference, "strategusExecution"),
   keyringName = "troy"
 )
+
+source('~/git/Troy/R/troyFunction.R')
+
+troyFunction(cohortDatabaseSchema=executionSettings$workDatabaseSchema,
+            cohortTable=executionSettings$cohortTableNames$cohortTable,
+            connectionDetails=connectionDetails,
+            outputFolder=file.path(outputLocation, connectionDetailsReference, "strategusOutput"))
