@@ -397,33 +397,33 @@ tcis <- list(
 )
 #
 # # TEST ONLY
- # tcis <- list(
- #   # Study population: replication study 12 (ARISTOTLE trial)
- #   list(
- #     targetId = 346,#1787750, # Apixaban (ARISTOTLE trial)
- #     comparatorId = 347,#1787751, # Warfarin (ARISTOTLE trial)
- #     #indicationId = , #
- #     #genderConceptIds = c(8507, 8532), # use valid genders (remove unknown)
- #     #minAge = 35, # All ages In years. Can be NULL
- #     #maxAge = NULL, # All ages In years. Can be NULL
- #     excludedCovariateConceptIds = c(
- #       43013024,# Apixaban
- #       1310149 # Warfarin
- #     )
- #   ),
- #   list(
- #     targetId = 373,#1787752, # Apixaban (ARISTOTLE trial indication)
- #     comparatorId = 374,#1787753, # Warfarin (ARISTOTLE trial indication)
- #     #indicationId = , #
- #     #genderConceptIds = c(8507, 8532), # use valid genders (remove unknown)
- #     #minAge = 35, # All ages In years. Can be NULL
- #     #maxAge = NULL, # All ages In years. Can be NULL
- #     excludedCovariateConceptIds = c(
- #       43013024,# Apixaban
- #       1310149 # Warfarin
- #     )
- #   )
- # )
+# tcis <- list(
+#   # Study population: replication study 12 (ARISTOTLE trial)
+#   list(
+#     targetId = 346,#1787750, # Apixaban (ARISTOTLE trial)
+#     comparatorId = 347,#1787751, # Warfarin (ARISTOTLE trial)
+#     #indicationId = , #
+#     #genderConceptIds = c(8507, 8532), # use valid genders (remove unknown)
+#     #minAge = 35, # All ages In years. Can be NULL
+#     #maxAge = NULL, # All ages In years. Can be NULL
+#     excludedCovariateConceptIds = c(
+#       43013024,# Apixaban
+#       1310149 # Warfarin
+#     )
+#   ),
+#   list(
+#     targetId = 373,#1787752, # Apixaban (ARISTOTLE trial indication)
+#     comparatorId = 374,#1787753, # Warfarin (ARISTOTLE trial indication)
+#     #indicationId = , #
+#     #genderConceptIds = c(8507, 8532), # use valid genders (remove unknown)
+#     #minAge = 35, # All ages In years. Can be NULL
+#     #maxAge = NULL, # All ages In years. Can be NULL
+#     excludedCovariateConceptIds = c(
+#       43013024,# Apixaban
+#       1310149 # Warfarin
+#     )
+#   )
+# )
 ########### Cohort: O ##############
 outcomes <- tibble(
   cohortId = c(9, 10, 11, 12), # 3P MACE, 4P MACE, HHF + CV death, Storke + systemic embolism
