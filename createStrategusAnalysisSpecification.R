@@ -2,10 +2,10 @@
 # Name: "Trials Replication through Observational study by Yonsei - an OHDSI network study"
 # Packagename: Troy
 # Studyleader: Kyoung Won Kim<kwkim@yuhs.ac>, Seng Chan You<seng@ohdsi.org>
-# Createdby: Jaehyeong Cho <jhcho03@yuhs.ac>
+# Createdby: Jaehyeong Cho <jaehyeongcho@dsmc.or.kr>
 # Createddate: 2023-07-14
-# Modifiedby: Jaehyeong Cho <jhcho03@yuhs.ac>
-# Modifieddate: 2023-11-1
+# Modifiedby: Jaehyeong Cho <jaehyeongcho@dsmc.or.kr>
+# Modifieddate: 2024-07-08
 # Organizationname: YUHS
 # Description: "Strategus on TROY."
 
@@ -30,8 +30,8 @@ library(CohortGenerator)
 library(dplyr)
 
 outputFolder <- "~/output/TROY"
-studyStartDate <- '19700101'
-studyEndDate <- '20991231'
+# studyStartDate <- '19700101'
+# studyEndDate <- '20991231'
 
 ########### Cohorts: T and C ##############
 tcis <- list(
@@ -508,10 +508,10 @@ outcomeList <- append(
 )
 
 timeAtRisks <- tibble(
-  label = c("ITT", "P-P"),
+  label = c("On-treatment", "ITT"),
   riskWindowStart  = c(1, 1),
   startAnchor = c("cohort start", "cohort start"),
-  riskWindowEnd  = c(0, 9999),
+  riskWindowEnd  = c(0, 99999),
   endAnchor = c("cohort end", "cohort end"),
 )
 
@@ -574,6 +574,62 @@ characterizationModuleSpecifications <- createCharacterizationModuleSpecificatio
   covariateSettings = FeatureExtraction::createDefaultCovariateSettings()
 )
 
+# CohortIncidenceModule --------------------------------------------------------
+source("https://raw.githubusercontent.com/OHDSI/CohortIncidenceModule/v0.0.6/SettingsFunctions.R")
+exposureIndicationIds <- cohortDefinitionSet %>%
+  filter(!cohortId %in% outcomes$cohortId) %>%
+  pull(cohortId)
+targetList <- lapply(
+  exposureIndicationIds,
+  function(cohortId) {
+    CohortIncidence::createCohortRef(
+      id = cohortId, 
+      name = cohortDefinitionSet$cohortName[cohortDefinitionSet$cohortId == cohortId]
+    )
+  }
+)
+outcomeList <- lapply(
+  seq_len(nrow(outcomes)),
+  function(i) {
+    CohortIncidence::createOutcomeDef(
+      id = i, 
+      name = cohortDefinitionSet$cohortName[cohortDefinitionSet$cohortId == outcomes$cohortId[i]], 
+      cohortId = outcomes$cohortId[i], 
+      cleanWindow = outcomes$cleanWindow[i]
+    )
+  }
+)
+tars <- list()
+for (i in seq_len(nrow(timeAtRisks))) {
+  tars[[i]] <- CohortIncidence::createTimeAtRiskDef(
+    id = i, 
+    startWith = gsub("cohort ", "", timeAtRisks$startAnchor[i]), 
+    endWith = gsub("cohort ", "", timeAtRisks$endAnchor[i]), 
+    startOffset = timeAtRisks$riskWindowStart[i],
+    endOffset = timeAtRisks$riskWindowEnd[i]
+  )
+}
+analysis1 <- CohortIncidence::createIncidenceAnalysis(
+  targets = exposureIndicationIds,
+  outcomes = seq_len(nrow(outcomes)),
+  tars = seq_along(tars)
+)
+irDesign <- CohortIncidence::createIncidenceDesign(
+  targetDefs = targetList,
+  outcomeDefs = outcomeList,
+  tars = tars,
+  analysisList = list(analysis1),
+  strataSettings = CohortIncidence::createStrataSettings(
+    byYear = TRUE,
+    byGender = TRUE,
+    byAge = TRUE,
+    ageBreaks = seq(0, 110, by = 10)
+  )
+)
+cohortIncidenceModuleSpecifications <- createCohortIncidenceModuleSpecifications(
+  irDesign = irDesign$toList()
+)
+
 # CohortMethodModule -----------------------------------------------------------
 source("https://raw.githubusercontent.com/OHDSI/CohortMethodModule/v0.1.0/SettingsFunctions.R")
 covariateSettings <- FeatureExtraction::createDefaultCovariateSettings(
@@ -582,8 +638,8 @@ covariateSettings <- FeatureExtraction::createDefaultCovariateSettings(
 
 getDbCohortMethodDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(
   restrictToCommonPeriod = TRUE,
-  studyStartDate = studyStartDate,
-  studyEndDate = studyEndDate,
+  #studyStartDate = studyStartDate,
+  #studyEndDate = studyEndDate,
   maxCohortSize = 0,
   covariateSettings = covariateSettings
 )
@@ -653,7 +709,7 @@ for (i in seq_len(nrow(timeAtRisks))) {
     firstExposureOnly = FALSE,
     washoutPeriod = 0,
     removeDuplicateSubjects = "keep first",
-    censorAtNewRiskWindow = TRUE,
+    censorAtNewRiskWindow = FALSE,
     removeSubjectsWithPriorOutcome = TRUE,
     priorOutcomeLookback = 99999,
     riskWindowStart = timeAtRisks$riskWindowStart[[i]],
@@ -675,10 +731,93 @@ for (i in seq_len(nrow(timeAtRisks))) {
     matchOnPsArgs = matchOnPsArgs,
     # stratifyByPsArgs = stratifyByPsArgs,
     computeSharedCovariateBalanceArgs = computeSharedCovariateBalanceArgs,
-    #computeCovariateBalanceArgs = computeCovariateBalanceArgs,
+    computeCovariateBalanceArgs = computeCovariateBalanceArgs,
     fitOutcomeModelArgs = fitOutcomeModelArgs
   )
 }
+
+
+######################## NO MATCHING CM ###################################
+covariateSettings <- FeatureExtraction::createDefaultCovariateSettings(
+  addDescendantsToExclude = TRUE # Keep TRUE because you're excluding concepts
+)
+
+getDbCohortMethodDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(
+  restrictToCommonPeriod = TRUE,
+  #studyStartDate = studyStartDate,
+  #studyEndDate = studyEndDate,
+  maxCohortSize = 0,
+  covariateSettings = covariateSettings
+)
+
+createPsArgs = NULL
+matchOnPsArgs = NULL
+# stratifyByPsArgs <- CohortMethod::createStratifyByPsArgs(
+#   numberOfStrata = 5,
+#   stratificationColumns = c(),
+#   baseSelection = "all"
+# )
+computeSharedCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+  maxCohortSize = 250000,
+  covariateFilter = NULL
+)
+computeCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+  maxCohortSize = 250000,
+  covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
+)
+fitOutcomeModelArgs = CohortMethod::createFitOutcomeModelArgs(
+  modelType = "cox",
+  stratified = FALSE,
+  useCovariates = FALSE,
+  inversePtWeighting = FALSE,
+  prior = createPrior(
+    priorType = "laplace",
+    useCrossValidation = TRUE
+  ),
+  control = createControl(
+    cvType = "auto",
+    seed = 1,
+    resetCoefficients = TRUE,
+    startingVariance = 0.01,
+    tolerance = 2e-07,
+    cvRepetitions = 10,
+    noiseLevel = "quiet"
+  )
+)
+
+for (i in seq_len(nrow(timeAtRisks))) {
+  createStudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(
+    firstExposureOnly = FALSE,
+    washoutPeriod = 0,
+    removeDuplicateSubjects = "keep first",
+    censorAtNewRiskWindow = FALSE,
+    removeSubjectsWithPriorOutcome = TRUE,
+    priorOutcomeLookback = 99999,
+    riskWindowStart = timeAtRisks$riskWindowStart[[i]],
+    startAnchor = timeAtRisks$startAnchor[[i]],
+    riskWindowEnd = timeAtRisks$riskWindowEnd[[i]],
+    endAnchor = timeAtRisks$endAnchor[[i]],
+    minDaysAtRisk = 1,
+    maxDaysAtRisk = 99999
+  )
+  cmAnalysisList[[i+2]] <- CohortMethod::createCmAnalysis(
+    analysisId = i+2,
+    description = sprintf(
+      "Cohort method, No matching, %s",
+      timeAtRisks$label[i]
+    ),
+    getDbCohortMethodDataArgs = getDbCohortMethodDataArgs,
+    createStudyPopArgs = createStudyPopArgs,
+    createPsArgs = createPsArgs,
+    matchOnPsArgs = matchOnPsArgs,
+    # stratifyByPsArgs = stratifyByPsArgs,
+    computeSharedCovariateBalanceArgs = computeSharedCovariateBalanceArgs,
+    computeCovariateBalanceArgs = computeCovariateBalanceArgs,
+    fitOutcomeModelArgs = fitOutcomeModelArgs
+  )
+}
+
+###########################################################################
 cohortMethodModuleSpecifications <- createCohortMethodModuleSpecifications(
   cmAnalysisList = cmAnalysisList,
   targetComparatorOutcomesList = targetComparatorOutcomesList,
@@ -691,7 +830,8 @@ analysisSpecifications <- Strategus::createEmptyAnalysisSpecificiations() %>%
   Strategus::addSharedResources(cohortDefinitionShared) %>%
   Strategus::addSharedResources(negativeControlsShared) %>%
   Strategus::addModuleSpecifications(cohortGeneratorModuleSpecifications) %>%
-  Strategus::addModuleSpecifications(cohortDiagnosticsModuleSpecifications) %>%
+  #Strategus::addModuleSpecifications(cohortDiagnosticsModuleSpecifications) %>%
+  Strategus::addModuleSpecifications(cohortIncidenceModuleSpecifications) %>%
   Strategus::addModuleSpecifications(characterizationModuleSpecifications) %>%
   Strategus::addModuleSpecifications(cohortMethodModuleSpecifications)
 
